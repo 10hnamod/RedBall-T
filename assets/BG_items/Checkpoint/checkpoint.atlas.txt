@@ -1,0 +1,20 @@
+
+checkpoint.png
+size: 240,160
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+checkpoint_off
+  rotate: true
+  xy: 2, 2
+  size: 153, 179
+  orig: 153, 179
+  offset: 0, 0
+  index: -1
+off
+  rotate: false
+  xy: 183, 103
+  size: 52, 52
+  orig: 52, 52
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,36 @@
+{
+  "ver": "2.3.5",
+  "uuid": "a520ef6c-0caa-4ebb-8cf9-2bd23f2f4eca",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "width": 8001,
+  "height": 4501,
+  "platformSettings": {},
+  "subMetas": {
+    "BallSpiderman-01": {
+      "ver": "1.0.4",
+      "uuid": "9642d2a9-eaf9-48c4-a195-5e871c252a6e",
+      "rawTextureUuid": "a520ef6c-0caa-4ebb-8cf9-2bd23f2f4eca",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": -49.5,
+      "offsetY": 49.5,
+      "trimX": 2034,
+      "trimY": 284,
+      "width": 3834,
+      "height": 3834,
+      "rawWidth": 8001,
+      "rawHeight": 4501,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}
