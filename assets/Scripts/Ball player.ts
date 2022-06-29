@@ -26,7 +26,7 @@ export default class Ball extends cc.Component {
         this.Direction = 0; // start
         this.Rigid_Body = this.node.getComponent(cc.RigidBody);
         this.Vel_Max_X = 300; // vận tốc max theo chiều x
-        this.Walk_Force = 1000; // tự đi
+        this.Walk_Force = 10000; // tự đi
         this.Jump_Force = 1500000; // nhảy
         this.On_The_Ground = false;
     }
