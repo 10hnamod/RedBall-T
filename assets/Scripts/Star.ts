@@ -33,7 +33,10 @@ export default class star extends cc.Component {
     // onLoad () {}
 
     start () {
-
+        cc.tween(this.node).repeatForever(
+            cc.tween(this.node).to(0.75, {angle: 10}, {easing: "smooth"})
+            .to(0.75, {angle: -10}, {easing: "smoth"})
+        ).start()
     }
 
     // update (dt) {}

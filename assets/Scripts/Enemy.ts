@@ -32,11 +32,7 @@ onLoad() {
     cc.director.getPhysicsManager().enabled = true
 }
 
-update(dt) {
-    if(this.start_flag2) {
-        // this.enemyMovement(dt);
-    }
-}
+
 
 start() {
     this.node.getComponent(cc.RigidBody).linearVelocity = cc.v2(-50, 0);
@@ -61,7 +57,7 @@ onBeginContact(contact, self, other) {
                 // this.score_100.addScore100();
                 this.stop = 0;
                 this.enemyDie();
-                other.node.runAction(cc.moveBy(0.3, 0, 300).easing(cc.easeIn(1)));
+                // other.node.runAction(cc.moveBy(0.3, 0, 300).easing(cc.easeIn(1)));
                 this.scheduleOnce(function() {
                     this.node.destroy();
                 }, 0.5)

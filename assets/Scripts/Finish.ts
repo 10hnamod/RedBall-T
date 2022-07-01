@@ -40,7 +40,7 @@ export default class NewClass extends cc.Component {
  
     update (dt) {
         this.finish.angle += 2;
-        cc.log(this.finish.angle);
+        // cc.log(this.finish.angle);
         let angle1 = this.finish.angle;
         // cc.tween(this.saw)
             cc.tween(this.node).repeatForever(
