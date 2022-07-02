@@ -1,3 +1,4 @@
+import camera from "./Camera_control";
 // Learn TypeScript:
 //  - https://docs.cocos.com/creator/manual/en/scripting/typescript.html
 // Learn Attribute:
@@ -18,7 +19,15 @@ export default class Ball extends cc.Component {
 
     @property(cc.Node)
     Button_jump: cc.Node = null;
+
+    @property(cc.Node)
+    text: cc.Node = null;
     
+    @property (cc.Node)
+    layer: cc.Node = null;
+
+    @property (cc.Node)
+    hand: cc.Node = null;
     
     
     Direction: number;
@@ -38,6 +47,11 @@ export default class Ball extends cc.Component {
         this.Button_right.on('touchstart', this.onButton_rightClick, this);
         this.Button_left.on('touchstart', this.onButton_leftClick, this);
         this.Button_jump.on('touchstart', this.onButton_jumpClick, this);
+            
+        this.text.active = true;
+        this.hand.active = true
+        this.layer.scale = 10000;
+    
         
         
         this.Direction = 0; // start
@@ -57,6 +71,9 @@ export default class Ball extends cc.Component {
     onButton_rightClick(){
         this.Direction = 1
         cc.log("hang_right")
+        this.text.active = false;
+        this.layer.scale = 0;
+        this.hand.active = false
     }
     onButton_leftClick(){
         this.Direction = -1

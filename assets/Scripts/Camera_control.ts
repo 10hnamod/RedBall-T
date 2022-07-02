@@ -1,3 +1,4 @@
+import Ball from "./Ball player";
 // Learn TypeScript:
 //  - https://docs.cocos.com/creator/manual/en/scripting/typescript.html
 // Learn Attribute:
@@ -19,12 +20,13 @@ export default class camera extends cc.Component {
     @property (cc.Node)
     buttonGroup: cc.Node = null;
 
+   
 
     // LIFE-CYCLE CALLBACKS:
 
-    // onLoad () {}
+    
     start () {
-
+        
     }
 
     update (dt) {
@@ -44,6 +46,8 @@ export default class camera extends cc.Component {
         // this.node.addChild(this.Back_ground_1)
         this.Back_ground_1.setPosition(current_position.x, current_position.y)
         this.buttonGroup.setPosition(current_position.x, current_position.y)
+
+
         
     }
 }
