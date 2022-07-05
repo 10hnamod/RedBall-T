@@ -28,7 +28,14 @@ export default class Ball extends cc.Component {
 
     @property (cc.Node)
     hand: cc.Node = null;
+
+    @property (cc.Node)
+    ball: cc.Node = null;
     
+    @property(cc.Prefab)
+    star: cc.Prefab = null;
+
+    public static ins: Ball;
     
     Direction: number;
     Rigid_Body: cc.RigidBody;
@@ -51,15 +58,16 @@ export default class Ball extends cc.Component {
         this.text.active = true;
         this.hand.active = true
         this.layer.scale = 10000;
+        this.ball.active = true;
     
-        
-        
         this.Direction = 0; // start
         this.Rigid_Body = this.node.getComponent(cc.RigidBody);
         this.Vel_Max_X = 300; // vận tốc max theo chiều x
         this.Walk_Force = 5000; // tự đi
-        this.Jump_Force = 800000; // nhảy
+        this.Jump_Force = 1100000; // nhảy
         this.On_The_Ground = false;
+
+        Ball.ins = this;
     }
     
     onBeginContact(contact, selfCollider, otherCollider){
@@ -67,8 +75,14 @@ export default class Ball extends cc.Component {
             this.On_The_Ground = true;
         }
     }
+    initStar(FxPosition, node) {        
+        var star = cc.instantiate(this.star);
+        node.addChild(star);
+    }
 
     onButton_rightClick(){
+        // cc.tween(this.node).call((=>
+        //     ))
         this.Direction = 1
         cc.log("hang_right")
         this.text.active = false;
@@ -124,6 +138,19 @@ export default class Ball extends cc.Component {
             break;
         }
     }
+    
+    // win(){
+    //     this.ball.active = true;
+    //     cc.tween(this.ball).repeat(3,cc.tween(this.ball)
+    //         .to(0, {opacity: 255})
+    //         .to(0, {position: cc.v3(350, -900)}, {easing: "smooth"})
+    //         .to(1.4, {position: colliderNode}, {easing: "smooth"})
+    //         .to(0.25, {opacity: 0}, {easing: "fade"})
+    //         .start()
+    //     ).call(() => {
+    //         this.hand.opacity = 0;
+    //     }).start();
+    // }
 
     start () {
 

@@ -47,6 +47,7 @@ start() {
 
 onBeginContact(contact, self, other) {
    if(other.node.name == "character") {
+    cc.log("...")
         //console.log(parseInt(contact.getWorldManifold().normal.x), parseInt(contact.getWorldManifold().normal.y))
         if(contact.getWorldManifold().normal.y > 0){
             cc.log(contact.getWorldManifold().normal.x)

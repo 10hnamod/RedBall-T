@@ -12,6 +12,7 @@ export default class star extends cc.Component {
 
     // @property(cc.Prefab)
     // star: cc.Prefab[] = []
+    public static ins: star;
 
     onLoad(): void {
         cc.director.getPhysicsManager().enabled = true;
@@ -27,6 +28,7 @@ export default class star extends cc.Component {
             console.log("Sao bi huy");
         }
     }
+    
 
     // LIFE-CYCLE CALLBACKS:
 

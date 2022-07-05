@@ -20,6 +20,11 @@ export default class camera extends cc.Component {
     @property (cc.Node)
     buttonGroup: cc.Node = null;
 
+    @property (cc.Node)
+    Ui: cc.Node = null;
+
+    @property (cc.Node)
+    Health: cc.Node = null;
    
 
     // LIFE-CYCLE CALLBACKS:
@@ -38,7 +43,7 @@ export default class camera extends cc.Component {
 
 
         let current_position = this.node.getPosition();
-        current_position.lerp( target_position, 0.1, current_position);
+        current_position.lerp( target_position, 0.5, current_position);
         
         this.node.setPosition(current_position);
         
@@ -46,6 +51,8 @@ export default class camera extends cc.Component {
         // this.node.addChild(this.Back_ground_1)
         this.Back_ground_1.setPosition(current_position.x, current_position.y)
         this.buttonGroup.setPosition(current_position.x, current_position.y)
+        this.Ui.setPosition(current_position.x, current_position.y)
+        this.Health.setPosition(current_position.x, current_position.y)
 
 
         
