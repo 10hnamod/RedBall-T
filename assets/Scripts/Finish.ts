@@ -5,30 +5,20 @@
 // Learn life-cycle callbacks:
 //  - https://docs.cocos.com/creator/manual/en/scripting/life-cycle-callbacks.html
 
+import GameManager from "./Main_game_control";
+
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class NewClass extends cc.Component {
+export default class finish extends cc.Component {
 
    
 
     @property(cc.Node)
     finish: cc.Node = null;
 
-    @property(cc.Node)
-    ball: cc.Node = null;
+    
 
-    onLoad() {
-        cc.director.getPhysicsManager().enabled = true
-        this.ball.active = true;
-    }
-
-
-    onBeginContact(contact, self, other) {
-        if(other.node.name == "character") {
-            this.ball.active = false;
-        } 
-     }
  
     // LIFE-CYCLE CALLBACKS:
     // onEnable(): void {
